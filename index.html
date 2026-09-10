@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Daily Note</title>
+
+  <!-- Playfair Display Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+
+
+  <style>
+
+    /* =========================================================
+       GLOBAL
+    ========================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #1d1d1b;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      transition: opacity .2s ease;
+    }
+
+    a:hover {
+      opacity: .7;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================== */
+
+    .site-header {
+      width: 100%;
+    }
+
+    .site-header .container {
+      max-width: 1320px;
+    }
+
+    .header-actions {
+      width: auto;
+    }
+
+    .site-header nav {
+      flex-wrap: wrap;
+    }
+
+    .site-header nav a {
+      white-space: nowrap;
+    }
+
+    .site-header .input-group {
+      width: auto;
+    }
+
+    .site-header .form-control {
+      min-width: 150px;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================== */
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      line-height: 1.1;
+      overflow-wrap: break-word;
+    }
+
+    .hero-description {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       CARDS
+    ========================================================== */
+
+    .card {
+      overflow: hidden;
+    }
+
+    .card img {
+      object-fit: cover;
+    }
+
+    .card-container {
+      min-height: 190px;
+    }
+
+    .card-title {
+      overflow-wrap: break-word;
+    }
+
+
+    /* =========================================================
+       TOPIC
+    ========================================================== */
+
+    .topic-icon {
+      font-size: 28px;
+    }
+
+    .topic-icon .material-symbols-outlined {
+      font-size: 28px;
+    }
+
+
+    /* =========================================================
+       EDITOR
+    ========================================================== */
+
+    .editor-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      line-height: 1.2;
+      overflow-wrap: break-word;
+    }
+
+
+    /* =========================================================
+       NEWSLETTER
+    ========================================================== */
+
+    .newsletter-section {
+      width: 50%;
+    }
+
+    .newsletter-section h1 {
+      line-height: 1.2;
+      overflow-wrap: break-word;
+    }
+
+    .newsletter-form {
+      width: 100%;
+    }
+
+    .newsletter-form input {
+      min-width: 0;
+    }
+
+
+    /* =========================================================
+       GALLERY
+    ========================================================== */
+
+    .gallery {
+      display: grid !important;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      width: 100%;
+    }
+
+    .gallery .col {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100% !important;
+      max-width: 200px !important;
+      height: 200px !important;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================== */
+
+    .site-footer {
+      width: 100%;
+    }
+
+    .footer-link:hover {
+      color: #1d1d1b !important;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       LARGE DESKTOP
+       1200px+
+    ========================================================== */
+
+    @media (min-width: 1200px) {
+
+      .site-header .container,
+      .container {
+        max-width: 1320px;
+      }
+
+    }
+
+
+    /* =========================================================
+       TABLET / SMALL LAPTOP
+       Below 992px
+    ========================================================== */
+
+    @media (max-width: 991.98px) {
+
+      /* Header */
+
+      .site-header .btn {
+        margin-left: 0 !important;
+      }
+
+      .header-actions {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .site-header nav {
+        justify-content: center;
+      }
+
+
+      /* Hero */
+
+      .hero-title {
+        font-size: 46px;
+      }
+
+
+      /* Editor */
+
+      .editor-title {
+        font-size: 38px;
+      }
+
+
+      /* Newsletter */
+
+      .newsletter-section {
+        width: 75% !important;
+      }
+
+
+      /* Gallery */
+
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .gallery img {
+        max-width: 200px !important;
+      }
+
+    }
+
+
+    /* =========================================================
+       TABLET
+       Below 768px
+    ========================================================== */
+
+    @media (max-width: 767.98px) {
+
+      /* Container */
+
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+
+      /* Header */
+
+      .site-header .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .site-header nav {
+        gap: 12px !important;
+      }
+
+      .header-actions {
+        gap: 10px !important;
+      }
+
+      .site-header form {
+        margin-left: 0 !important;
+      }
+
+
+      /* Hero */
+
+      .hero-title {
+        font-size: 40px !important;
+        line-height: 1.15;
+      }
+
+      .hero-title br {
+        display: none;
+      }
+
+      .hero-description {
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .hero-section {
+        margin-top: 30px;
+      }
+
+
+      /* Feature Heading */
+
+      .feature-heading {
+        font-size: 30px;
+      }
+
+
+      /* Cards */
+
+      .card-title {
+        font-size: 24px;
+        line-height: 1.3;
+      }
+
+      .card-text {
+        line-height: 1.6;
+      }
+
+
+      /* Topic */
+
+      .card-container {
+        min-height: 180px;
+      }
+
+
+      /* Editor */
+
+      .editor-title {
+        font-size: 34px !important;
+        line-height: 1.2;
+      }
+
+      .editor-title br {
+        display: none;
+      }
+
+
+      /* Newsletter */
+
+      .newsletter-section {
+        width: 100% !important;
+      }
+
+      .newsletter-section h1 {
+        font-size: 34px !important;
+        line-height: 1.2;
+      }
+
+      .newsletter-section h1 br {
+        display: none;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .newsletter-form input,
+      .newsletter-form button {
+        width: 100%;
+      }
+
+
+      /* Gallery */
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .gallery img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 180px !important;
+      }
+
+
+      /* Footer */
+
+      .site-footer {
+        text-align: left;
+      }
+
+      .site-footer .row {
+        row-gap: 35px;
+      }
+
+      .site-footer .input-group {
+        width: 100%;
+      }
+
+      .site-footer .input-group input {
+        min-width: 0;
+      }
+
+      .site-footer .input-group button {
+        white-space: nowrap;
+      }
+
+      .site-footer .social-icon {
+        flex-shrink: 0;
+      }
+
+      .site-footer .col-md-6:last-child {
+        margin-top: 15px;
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+       Below 576px
+    ========================================================== */
+
+    @media (max-width: 575.98px) {
+
+      /* Container */
+
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+
+      /* Header */
+
+      .site-header .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .site-header .py-3 {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+      }
+
+      .site-header nav {
+        width: 100%;
+        gap: 10px !important;
+      }
+
+      .site-header nav a {
+        font-size: 14px;
+      }
+
+      .header-actions {
+        width: 100%;
+      }
+
+      .site-header .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      .site-header .form-control {
+        display: none !important;
+      }
+
+
+      /* Hero */
+
+      .hero-title {
+        font-size: 34px !important;
+        line-height: 1.15;
+      }
+
+      .hero-title br {
+        display: none;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-title + p {
+        font-size: 16px !important;
+      }
+
+
+      /* Feature */
+
+      .feature-heading {
+        font-size: 28px;
+      }
+
+
+      /* Cards */
+
+      .card-img-top {
+        padding: 10px !important;
+      }
+
+      .card-body {
+        padding: 16px !important;
+      }
+
+      .card-title {
+        font-size: 22px;
+      }
+
+      .card-text {
+        font-size: 16px !important;
+      }
+
+      .card-bottom {
+        gap: 8px !important;
+      }
+
+      .card-bottom p {
+        font-size: 13px;
+      }
+
+
+      /* Topics */
+
+      .text-container {
+        padding: 25px 10px !important;
+      }
+
+      .text-container h3 {
+        font-size: 28px;
+        line-height: 1.25;
+      }
+
+      .text-container h3 br {
+        display: none;
+      }
+
+      .topic-icon {
+        font-size: 26px;
+      }
+
+
+      /* Journal */
+
+      .site-footer h5 {
+        font-size: 19px;
+      }
+
+
+      /* Editor */
+
+      .editor-title {
+        font-size: 30px !important;
+        line-height: 1.25;
+      }
+
+      .editor-title br {
+        display: none;
+      }
+
+      .editor-title + p {
+        font-size: 16px !important;
+      }
+
+
+      /* Newsletter */
+
+      .newsletter-section {
+        width: 100% !important;
+      }
+
+      .newsletter-section .col {
+        padding: 30px 18px !important;
+      }
+
+      .newsletter-section h1 {
+        font-size: 30px !important;
+        line-height: 1.25;
+      }
+
+      .newsletter-section h1 br {
+        display: none;
+      }
+
+      .newsletter-section p {
+        font-size: 16px !important;
+        line-height: 1.6;
+      }
+
+      .newsletter-form {
+        gap: 10px !important;
+      }
+
+
+      /* Gallery */
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .gallery img {
+        width: 100% !important;
+        height: 150px !important;
+      }
+
+
+      /* Footer */
+
+      .site-footer {
+        padding-top: 40px !important;
+        padding-bottom: 30px !important;
+      }
+
+      .site-footer .card-text {
+        font-size: 16px !important;
+      }
+
+      .site-footer .input-group {
+        display: flex;
+      }
+
+      .site-footer .input-group input {
+        width: 100%;
+        font-size: 12px;
+      }
+
+      .site-footer .input-group button {
+        padding: 0 12px !important;
+        font-size: 12px !important;
+      }
+
+      .site-footer .d-flex.justify-content-center.justify-content-md-end {
+        justify-content: center !important;
+        gap: 15px !important;
+        flex-wrap: wrap;
+      }
+
+      .site-footer .row.align-items-center {
+        text-align: center;
+      }
+
+    }
+
+
+    /* =========================================================
+       VERY SMALL MOBILE
+       Below 400px
+    ========================================================== */
+
+    @media (max-width: 399.98px) {
+
+      .hero-title {
+        font-size: 30px !important;
+      }
+
+      .site-header nav a {
+        font-size: 13px;
+      }
+
+      .site-header .btn {
+        font-size: 13px;
+        padding: 7px 10px;
+      }
+
+      .card-title {
+        font-size: 20px;
+      }
+
+      .text-container h3 {
+        font-size: 25px;
+      }
+
+      .editor-title {
+        font-size: 27px !important;
+      }
+
+      .newsletter-section h1 {
+        font-size: 27px !important;
+      }
+
+      .gallery img {
+        height: 130px !important;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+  <header class="site-header border-bottom bg-white">
+
+    <div class="container px-4">
+
+      <div class="d-flex flex-column flex-lg-row align-items-center
+                  justify-content-between gap-3 py-3">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="text-decoration-none text-dark">
+
+          <div class="fs-4 font-monospace">
+            THE DAILY NOTE
+          </div>
+
+          <div class="small">
+            For A Better Everyday Life
+          </div>
+
+        </a>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="d-flex flex-wrap justify-content-center
+                    align-items-center gap-2 header-actions">
+
+
+          <!-- MAIN MENU -->
+
+          <nav class="d-flex flex-wrap justify-content-center
+                      align-items-center gap-3">
+
+            <a href="#" class="text-decoration-none text-dark">
+              Home
+            </a>
+
+            <a href="#" class="text-decoration-none text-dark">
+              Blog
+            </a>
+
+            <a href="#" class="text-decoration-none text-dark">
+              About
+            </a>
+
+            <a href="#" class="text-decoration-none text-dark">
+              Contact
+            </a>
+
+          </nav>
+
+
+          <!-- SEARCH -->
+
+          <form class="d-flex align-items-center ms-lg-3" role="search">
+
+            <div class="input-group">
+
+              <input type="search"
+                class="form-control d-none d-xl-block"
+                placeholder="Search"
+                aria-label="Search">
+
+              <button type="submit"
+                class="input-group-text bg-white border"
+                aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+              </button>
+
+            </div>
+
+          </form>
+
+
+          <!-- SUBSCRIBE -->
+
+          <a href="#" class="btn btn-dark ms-lg-3">
+            Subscribe
+          </a>
+
+
+          <!-- CONTACT ICON -->
+
+          <a href="contact.html"
+            class="btn btn-dark"
+            aria-label="Contact">
+
+            <i class="fa-regular fa-envelope"></i>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================================
+       HERO SECTION
+  ========================================================== -->
+
+  <section class="container mt-5 hero-section">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-12 col-lg-6">
+
+        <p class="mt-5">
+          PERSONAL GROWTH
+        </p>
+
+
+        <h1 class="pt-2 hero-title"
+          style="font-family:'Playfair Display', serif;
+                 font-size:56px;
+                 line-height:1.1;">
+
+          The Quiet Habits That <br>
+          Can Completely <br>
+          Change Your Life
+
+        </h1>
+
+
+        <p class="card-text text-muted mt-3 hero-description"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;
+                 line-height:1.7;">
+
+          Big changes rarely happen overnight. More often, they begin with
+          small choices repeated quietly every day. Here are the habits that
+          can help you create a calmer, more intentional life.
+
+        </p>
+
+
+        <p class="text-muted">
+
+          <b>Emma Center.</b>
+          September 2017. 7 min read
+
+        </p>
+
+
+        <a href="#"
+          class="text-decoration-none text-dark"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          Read The Story
+
+          <i class="fas fa-arrow-right ms-2"></i>
+
+        </a>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+
+        <img src="image/hero image.png"
+          alt="Hero Image"
+          class="img-fluid w-100">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       FEATURE STORIES
+  ========================================================== -->
+
+  <section class="container mt-5">
+
+    <div class="row align-items-center">
+
+      <div class="col-12 col-lg-6">
+
+        <p class="card-text text-muted mt-3"
+          style="font-family:'Inter', sans-serif;
+                 font-size:15px;">
+
+          FEATURE STORIES
+
+        </p>
+
+        <h2 class="pt-2 feature-heading"
+          style="font-family:'Playfair Display', serif;">
+
+          Ideas worth slowing down for
+
+        </h2>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6 text-lg-end mt-3 mt-lg-0">
+
+        <a href="#"
+          class="text-decoration-none text-dark">
+
+          Read The Story
+
+          <i class="fas fa-arrow-right ms-2"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       FEATURE CARDS
+  ========================================================== -->
+
+  <div class="container mt-5">
+
+    <div class="row g-4">
+
+
+      <!-- CARD 1 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card shadow border-0 h-100">
+
+          <img src="image/Container.png"
+            class="card-img-top p-3"
+            alt="Morning Routine">
+
+          <div class="card-body p-3">
+
+            <h6 class="pt-3 text-muted"
+              style="font-family:'Inter', sans-serif;
+                     font-size:14px;">
+
+              WELLNESS
+
+            </h6>
+
+
+            <h4 class="card-title"
+              style="font-family:'Playfair Display', serif;">
+
+              How to Create a Morning Routine You
+              Actually Enjoy
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              A realistic approach to creating mornings that feel
+              calmer, healthier, and easier to maintain.
+
+            </p>
+
+
+            <div class="card-bottom d-flex flex-wrap gap-3
+                        text-muted"
+              style="font-family:'Inter', sans-serif;">
+
+              <p class="text-muted mb-0">
+                Olivia Parker
+              </p>
+
+              <p class="text-muted mb-0">
+                Sep 4, 2026 • 5 min
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- CARD 2 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card shadow border-0 h-100">
+
+          <img src="image/Container (1).png"
+            class="card-img-top p-3"
+            alt="Productivity">
+
+          <div class="card-body p-3">
+
+            <h6 class="pt-3 text-muted"
+              style="font-family:'Inter', sans-serif;
+                     font-size:14px;">
+
+              PRODUCTIVITY
+
+            </h6>
+
+
+            <h4 class="card-title"
+              style="font-family:'Playfair Display', serif;">
+
+              Why Doing Less Can Help You
+              Accomplish More
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Productivity is not about filling every minute.
+              Sometimes your best work begins when you create...
+
+            </p>
+
+
+            <div class="card-bottom d-flex flex-wrap gap-3
+                        text-muted"
+              style="font-family:'Inter', sans-serif;">
+
+              <p class="text-muted mb-0">
+                Daniel Books
+              </p>
+
+              <p class="text-muted mb-0">
+                Sep 1, 2026 • 6 min
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- CARD 3 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card shadow border-0 h-100">
+
+          <img src="image/Container (2).png"
+            class="card-img-top p-3"
+            alt="Travel">
+
+          <div class="card-body p-3">
+
+            <h6 class="pt-3 text-muted"
+              style="font-family:'Inter', sans-serif;
+                     font-size:14px;">
+
+              TRAVEL
+
+            </h6>
+
+
+            <h4 class="card-title"
+              style="font-family:'Playfair Display', serif;">
+
+              A Slow Weekend in a Small Coastal
+              Town
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Coffee shops, quiet beaches, bookstores, and long
+              walks — sometimes the simplest trips are the most...
+
+            </p>
+
+
+            <div class="card-bottom d-flex flex-wrap gap-3
+                        text-muted"
+              style="font-family:'Inter', sans-serif;">
+
+              <p class="text-muted mb-0">
+                Sophia Miller
+              </p>
+
+              <p class="text-muted mb-0">
+                Aug 28, 2026 • 8 min
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       TOPICS
+  ========================================================== -->
+
+  <div class="container mt-5">
+
+    <div class="row g-4">
+
+
+      <div class="col-12">
+
+        <div class="text-container text-center p-4 p-md-5">
+
+          <h6 class="pt-3 text-muted"
+            style="font-family:'Inter', sans-serif;
+                   font-size:14px;">
+
+            EXPLORE BY TOPICS
+
+          </h6>
+
+
+          <h3 style="font-family:'Playfair Display', serif;">
+
+            Find Something For Your Current <br>
+            Season
+
+          </h3>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- WELLNESS -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card-container h-100">
+
+          <div class="card-body shadow p-4 h-100">
+
+            <span class="material-symbols-outlined
+                         d-flex align-items-center pb-3 topic-icon">
+
+              favorite
+
+              <span class="material-symbols-outlined ms-auto">
+                arrow_outward
+              </span>
+
+            </span>
+
+
+            <h4 class="pb-1"
+              style="font-family:'Playfair Display', serif;">
+
+              Wellness
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Simple ideas for a healthier mind and body.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PERSONAL GROWTH -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card-container h-100">
+
+          <div class="card-body shadow p-4 h-100">
+
+            <span class="material-symbols-outlined
+                         d-flex align-items-center pb-3 topic-icon">
+
+              menu_book
+
+              <span class="material-symbols-outlined ms-auto">
+                arrow_outward
+              </span>
+
+            </span>
+
+
+            <h4 class="pb-1"
+              style="font-family:'Playfair Display', serif;">
+
+              Personal Growth
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Thoughtful lessons for becoming who you are.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- TRAVEL -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card-container h-100">
+
+          <div class="card-body shadow p-4 h-100">
+
+            <span class="material-symbols-outlined
+                         d-flex align-items-center pb-3 topic-icon">
+
+              explore
+
+              <span class="material-symbols-outlined ms-auto">
+                arrow_outward
+              </span>
+
+            </span>
+
+
+            <h4 class="pb-1"
+              style="font-family:'Playfair Display', serif;">
+
+              Travel
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Beautiful places and slower ways to explore.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PRODUCTIVITY -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card-container h-100">
+
+          <div class="card-body shadow p-4 h-100">
+
+            <span class="material-symbols-outlined
+                         d-flex align-items-center pb-3 topic-icon">
+
+              bolt
+
+              <span class="material-symbols-outlined ms-auto">
+                arrow_outward
+              </span>
+
+            </span>
+
+
+            <h4 class="pb-1"
+              style="font-family:'Playfair Display', serif;">
+
+              Productivity
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Work smarter without sacrificing your peace.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- CREATIVITY -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card-container h-100">
+
+          <div class="card-body shadow p-4 h-100">
+
+            <span class="material-symbols-outlined
+                         d-flex align-items-center pb-3 topic-icon">
+
+              stylus
+
+              <span class="material-symbols-outlined ms-auto">
+                arrow_outward
+              </span>
+
+            </span>
+
+
+            <h4 class="pb-1"
+              style="font-family:'Playfair Display', serif;">
+
+              Creativity
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Ideas, inspiration, and tools for creative living.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- TECHNOLOGY -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card-container h-100">
+
+          <div class="card-body shadow p-4 h-100">
+
+            <span class="material-symbols-outlined
+                         d-flex align-items-center pb-3 topic-icon">
+
+              laptop_windows
+
+              <span class="material-symbols-outlined ms-auto">
+                arrow_outward
+              </span>
+
+            </span>
+
+
+            <h4 class="pb-1"
+              style="font-family:'Playfair Display', serif;">
+
+              Technology
+
+            </h4>
+
+
+            <p class="card-text text-muted mt-2"
+              style="font-family:'Inter', sans-serif;
+                     font-size:18px;">
+
+              Useful technology without the unnecessary noise.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       LATEST JOURNAL
+  ========================================================== -->
+
+  <section class="container mt-5">
+
+    <div class="row align-items-center">
+
+      <div class="col-12 col-lg-6 mt-5">
+
+        <h6 class="pt-3 text-muted"
+          style="font-family:'Inter', sans-serif;
+                 font-size:14px;">
+
+          FRESH PERSPECTIVES
+
+        </h6>
+
+
+        <h2 style="font-family:'Playfair Display', serif;">
+
+          Latest From The Journal
+
+        </h2>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       JOURNAL CARDS 1-3
+  ========================================================== -->
+
+  <div class="container mt-5">
+
+    <div class="row g-5">
+
+
+      <!-- CARD 1 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <img src="image/Margin.png"
+          class="card-img-top w-100"
+          alt="Phone">
+
+        <h6 class="pt-3 text-muted"
+          style="font-family:'Inter', sans-serif;
+                 font-size:13px;">
+
+          TECHNOLOGY
+
+        </h6>
+
+
+        <h4 class="card-title"
+          style="font-family:'Playfair Display', serif;">
+
+          How to Stop Checking Your Phone First
+          Thing in the Morning
+
+        </h4>
+
+
+        <p class="card-text text-muted mt-2"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          Reclaim your early hours by building a simple barrier
+          between waking up and digital demands.
+
+        </p>
+
+
+        <p class="text-muted"
+          style="font-family:'Inter', sans-serif;">
+
+          Aug 24, 2026 • 4 min read
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CARD 2 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <img
+          src="image/AB6AXuAM2gPOVe3usjvWM5yGt-JP_Q0gsHErjoxgOSjWLPbPm2rc_2FATUkHN_dANaMcieuytW-kwmuwcXae7v_bYMsgbGwfsZKzQ-W5kbqDX6kZU8EH9J3fAHeOp9mPkHWF7FjobW6KpkuLMkYXkozLsH4XZ-bRZVdbizEqYuQhXdox802uWL_aml5QdcNqCOCejp_hXvR2-n5Gml3NTnzSu.png"
+          class="card-img-top w-100"
+          alt="Sunday Reset">
+
+        <h6 class="pt-3 text-muted"
+          style="font-family:'Inter', sans-serif;
+                 font-size:13px;">
+
+          PRODUCTIVITY
+
+        </h6>
+
+
+        <h4 class="card-title"
+          style="font-family:'Playfair Display', serif;">
+
+          The Sunday Reset Routine That Makes
+          Monday Easier
+
+        </h4>
+
+
+        <p class="card-text text-muted mt-2"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          A peaceful 45-minute evening ritual to prepare your home
+          and mind for the upcoming week.
+
+        </p>
+
+
+        <p class="text-muted"
+          style="font-family:'Inter', sans-serif;">
+
+          Aug 20, 2026 • 5 min read
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CARD 3 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <img src="image/Background+Shadow (1).png"
+          class="card-img-top w-100"
+          alt="Walking">
+
+        <h6 class="pt-3 text-muted"
+          style="font-family:'Inter', sans-serif;
+                 font-size:13px;">
+
+          PRODUCTIVITY
+
+        </h6>
+
+
+        <h4 class="card-title"
+          style="font-family:'Playfair Display', serif;">
+
+          Why Walking Might Be the Most
+          Underrated Productivity Tool
+
+        </h4>
+
+
+        <p class="card-text text-muted mt-2"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          Unlocking creative problem solving by stepping away from
+          the desk and into movement.
+
+        </p>
+
+
+        <p class="text-muted"
+          style="font-family:'Inter', sans-serif;">
+
+          Aug 15, 2026 • 6 min read
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       JOURNAL CARDS 4-6
+  ========================================================== -->
+
+  <div class="container mt-5">
+
+    <div class="row g-5">
+
+
+      <!-- CARD 4 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <img src="image/Background+Shadow (2).png"
+          class="card-img-top w-100"
+          alt="Books">
+
+        <h6 class="pt-3 text-muted"
+          style="font-family:'Inter', sans-serif;
+                 font-size:13px;">
+
+          CREATIVITY
+
+        </h6>
+
+
+        <h4 class="card-title"
+          style="font-family:'Playfair Display', serif;">
+
+          Five Books That Changed How I Think
+          About Work
+
+        </h4>
+
+
+        <p class="card-text text-muted mt-2"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          Essential reads on focus, craftsmanship, and finding
+          meaning beyond productivity output.
+
+        </p>
+
+
+        <p class="text-muted"
+          style="font-family:'Inter', sans-serif;">
+
+          Aug 11, 2026 • 8 min read
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CARD 5 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <img src="image/Background+Shadow (3).png"
+          class="card-img-top w-100"
+          alt="Social Media">
+
+        <h6 class="pt-3 text-muted"
+          style="font-family:'Inter', sans-serif;
+                 font-size:13px;">
+
+          PERSONAL GROWTH
+
+        </h6>
+
+
+        <h4 class="card-title"
+          style="font-family:'Playfair Display', serif;">
+
+          What I Learned From Taking a Month Off
+          Social Media
+
+        </h4>
+
+
+        <p class="card-text text-muted mt-2"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          Reflections on attention span, real-world presence, and
+          overcoming fear of missing out.
+
+        </p>
+
+
+        <p class="text-muted"
+          style="font-family:'Inter', sans-serif;">
+
+          Aug 05, 2026 • 7 min read
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CARD 6 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <img src="image/Background+Shadow (4).png"
+          class="card-img-top w-100"
+          alt="Calm Home">
+
+        <h6 class="pt-3 text-muted"
+          style="font-family:'Inter', sans-serif;
+                 font-size:13px;">
+
+          WELLNESS
+
+        </h6>
+
+
+        <h4 class="card-title"
+          style="font-family:'Playfair Display', serif;">
+
+          The Art of Creating a Home That Feels
+          Calm
+
+        </h4>
+
+
+        <p class="card-text text-muted mt-2"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          Design choices, decluttering principles, and lighting setups
+          that cultivate peace.
+
+        </p>
+
+
+        <p class="text-muted"
+          style="font-family:'Inter', sans-serif;">
+
+          Jul 29, 2026 • 5 min read
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       EDITOR PICK
+  ========================================================== -->
+
+  <div class="container mt-5">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-12 col-lg-6 text-center mt-5">
+
+        <h6>
+          EDITOR'S PICK
+        </h6>
+
+
+        <h1 class="pt-2 editor-title"
+          style="font-family:'Playfair Display', serif;
+                 font-size:40px;">
+
+          Build a life that feels <br>
+          good, not just one that <br>
+          looks good
+
+        </h1>
+
+
+        <p class="card-text text-muted mt-2"
+          style="font-family:'Inter', sans-serif;
+                 font-size:18px;">
+
+          We spend so much time chasing the appearance of success
+          that we sometimes forget to ask whether our lives actually feel
+          fulfilling. This essay explores how to redefine progress on your
+          own terms.
+
+        </p>
+
+
+        <button
+          class="btn text-white px-4 py-2"
+          style="background-color:#486550;
+                 border-radius:8px;">
+
+          Read The Essay
+
+        </button>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+
+        <img
+          src="image/AB6AXuDQWFIVRtF3VjVGv1qtzUZdBkUjbBeohSQjpxhaVeLRp0sKPX_s8WaMdjxsL46oM_t2VJEt3OnZrl0IZhCGky0Ny0Pgyobw1Imaz2xZjqMuNTyjoX8lSH--GDQB1BcOeKPTLdh8PdowtXFUF8grVLWIiZdP8e-ESQe1nB0EN9LTmXsoIjCfbi5IwYosiWpR9qRqfCWi40G7NjNyiZ4o8.png"
+          class="img-fluid w-100"
+          alt="Editor pick image">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       NEWSLETTER
+  ========================================================== -->
+
+  <div class="container text-center mt-5 newsletter-section">
+
+    <div class="row">
+
+      <div class="col bg-body-secondary p-4 p-md-5">
+
+        <form action="#">
+
+          <h6>
+            WEEKLY JOURNAL
+          </h6>
+
+
+          <h1 class="pt-2"
+            style="font-family:'Playfair Display', serif;
+                   font-size:40px;">
+
+            A thoughtful email for your <br>
+            Sunday morning
+
+          </h1>
+
+
+          <p class="card-text text-muted mt-2"
+            style="font-family:'Inter', sans-serif;
+                   font-size:18px;">
+
+            A short collection of ideas, articles, books, and inspiration
+            delivered once a week. No noise, no spam.
+
+          </p>
+
+
+          <div class="d-flex justify-content-center
+                      gap-2 newsletter-form">
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email"
+              required
+              class="form-control"
+              style="padding:12px;
+                     border-radius:10px;
+                     background-color:white;">
+
+            <button
+              type="submit"
+              class="btn"
+              style="padding:12px 18px;
+                     border-radius:10px;
+                     background-color:black;
+                     color:white;
+                     font-family:'Inter', sans-serif;
+                     font-size:16px;">
+
+              Join The Newsletter
+
+            </button>
+
+          </div>
+
+
+          <p class="card-text text-muted mt-3"
+            style="font-family:'Inter', sans-serif;
+                   font-size:16px;">
+
+            Join 12,000+ thoughtful readers.
+
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       GALLERY
+  ========================================================== -->
+
+  <div class="container mt-5">
+
+    <div class="row">
+
+      <div class="gallery d-flex">
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyh7GV2y5D9WMZh28gI6M2k6ve06KbY13Tnuks8n1I8Cg_ETue8IrTAo&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiHSuCYr5pFHjg584mpFaJQGoM9TkHpOYXthlzWV4Oqg&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi7aT6QcAlgnhmaj3kfK4dPAKymP3mozt70sc2gzRRKFaVPKwXTZspguc&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv706wasX8_gPbdp8O0TT1LXeOdNMG0ZONBZZ6pnebRg&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyh7GV2y5D9WMZh28gI6M2k6ve06KbY13Tnuks8n1I8Cg_ETue8IrTAo&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_R3quQdjcWzR2yV-Xn2RITSWg6shXAdHs2kv1k5qeEw&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="site-footer py-5 mt-5"
+    style="background:#f5f2ec;
+           color:#1d1d1b;
+           border-top:1px solid #e5e0d7;">
+
+    <div class="container">
+
+
+      <!-- MAIN FOOTER -->
+
+      <div class="row gy-5">
+
+
+        <!-- BRAND -->
+
+        <div class="col-lg-5 col-md-6">
+
+          <h5 class="mt-4 mb-3"
+            style="font-family:'Playfair Display',serif;
+                   font-size:20px;
+                   font-weight:600;">
+
+            THE DAILY NOTE
+
+          </h5>
+
+
+          <p class="card-text text-muted mt-2"
+            style="font-family:'Inter', sans-serif;
+                   font-size:18px;">
+
+            Thoughtful stories about living, working, creating, and
+            growing with intention. Published weekly for contemplative
+            minds.
+
+          </p>
+
+
+          <!-- SOCIAL ICONS -->
+
+          <div class="d-flex gap-3 mt-4">
+
+
+            <!-- Facebook -->
+
+            <a href="#"
+              aria-label="Facebook"
+              class="social-icon d-flex align-items-center
+                     justify-content-center rounded-circle
+                     text-decoration-none"
+              style="width:38px;
+                     height:38px;
+                     border:1px solid #d8d2c8;
+                     color:#1d1d1b;
+                     transition:.3s;">
+
+              <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- Instagram -->
+
+            <a href="#"
+              aria-label="Instagram"
+              class="social-icon d-flex align-items-center
+                     justify-content-center rounded-circle
+                     text-decoration-none"
+              style="width:38px;
+                     height:38px;
+                     border:1px solid #d8d2c8;
+                     color:#1d1d1b;
+                     transition:.3s;">
+
+              <i class="fab fa-instagram"></i>
+
+            </a>
+
+
+            <!-- Twitter -->
+
+            <a href="#"
+              aria-label="Twitter"
+              class="social-icon d-flex align-items-center
+                     justify-content-center rounded-circle
+                     text-decoration-none"
+              style="width:38px;
+                     height:38px;
+                     border:1px solid #d8d2c8;
+                     color:#1d1d1b;
+                     transition:.3s;">
+
+              <i class="fab fa-twitter"></i>
+
+            </a>
+
+
+            <!-- LinkedIn -->
+
+            <a href="#"
+              aria-label="LinkedIn"
+              class="social-icon d-flex align-items-center
+                     justify-content-center rounded-circle
+                     text-decoration-none"
+              style="width:38px;
+                     height:38px;
+                     border:1px solid #d8d2c8;
+                     color:#1d1d1b;
+                     transition:.3s;">
+
+              <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <div class="col-lg-2 col-md-6">
+
+          <h6 class="mb-4"
+            style="font-family:'Playfair Display',serif;
+                   font-size:17px;
+                   font-weight:600;">
+
+            Menu
+
+          </h6>
+
+
+          <ul class="list-unstyled mb-0">
+
+            <li class="mb-3">
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                Home
+              </a>
+            </li>
+
+
+            <li class="mb-3">
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                About
+              </a>
+            </li>
+
+
+            <li class="mb-3">
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                Explore
+              </a>
+            </li>
+
+
+            <li class="mb-3">
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                Services
+              </a>
+            </li>
+
+
+            <li>
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                About Us
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+
+        <!-- TOPICS -->
+
+        <div class="col-lg-2 col-md-6">
+
+          <h6 class="mb-4"
+            style="font-family:'Playfair Display',serif;
+                   font-size:17px;
+                   font-weight:600;">
+
+            Topics
+
+          </h6>
+
+
+          <ul class="list-unstyled mb-0">
+
+            <li class="mb-3">
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                Wellness
+              </a>
+            </li>
+
+
+            <li class="mb-3">
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                Personal Growth
+              </a>
+            </li>
+
+
+            <li class="mb-3">
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                Productivity
+              </a>
+            </li>
+
+
+            <li>
+              <a href="#"
+                class="footer-link text-decoration-none"
+                style="color:#77736c;
+                       font-size:14px;">
+                Creativity
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+
+        <!-- DISPATCH -->
+
+        <div class="col-lg-3 col-md-6">
+
+          <h6 class="mb-4"
+            style="font-family:'Playfair Display',serif;
+                   font-size:17px;
+                   font-weight:600;">
+
+            Dispatch
+
+          </h6>
+
+
+          <p class="mb-0"
+            style="color:#77736c;
+                   font-size:14px;
+                   line-height:1.8;">
+
+            Thoughtful ideas, useful insights and quiet inspiration,
+            delivered straight to your inbox.
+
+          </p>
+
+
+          <!-- Newsletter -->
+
+          <form class="mt-4">
+
+            <div class="input-group">
+
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your email address"
+                required
+                style="height:48px;
+                       background:transparent;
+                       border:1px solid #d8d2c8;
+                       border-radius:0;
+                       box-shadow:none;
+                       font-size:13px;
+                       padding:0 8px;">
+
+              <button
+                type="submit"
+                class="btn"
+                style="background:#1d1d1b;
+                       color:#fff;
+                       border-radius:0;
+                       padding:0 20px;
+                       font-size:13px;
+                       font-weight:500;">
+
+                Subscribe
+
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="row align-items-center mt-5 pt-4"
+        style="border-top:1px solid #ded9d0;">
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="col-md-6">
+
+          <p class="mb-0 text-center text-md-start"
+            style="color:#88847c;
+                   font-size:12px;">
+
+            © 2026 The Daily Note. All rights reserved.
+
+          </p>
+
+        </div>
+
+
+        <!-- PRIVACY / TERMS -->
+
+        <div class="col-md-6 mt-3 mt-md-0">
+
+          <div class="d-flex justify-content-center
+                      justify-content-md-end gap-4">
+
+            <a href="#"
+              class="footer-link text-decoration-none"
+              style="color:#88847c;
+                     font-size:12px;">
+
+              Privacy Policy
+
+            </a>
+
+
+            <a href="#"
+              class="footer-link text-decoration-none"
+              style="color:#88847c;
+                     font-size:12px;">
+
+              Terms & Conditions
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       BOOTSTRAP JS
+  ========================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrVWrJcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
