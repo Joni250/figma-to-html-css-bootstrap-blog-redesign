@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Daily Note</title>
+
+  <!-- Playfair Display Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="index.html">
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+  <header class="site-header border-bottom bg-white">
+
+    <div class="container px-4">
+
+      <div class="d-flex flex-column flex-lg-row align-items-center
+                  justify-content-between gap-3 py-3">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="text-decoration-none text-dark">
+
+          <div class="fs-4 font-monospace">
+            THE DAILY NOTE
+          </div>
+
+          <div class="small">
+            For A Better Everyday Life
+          </div>
+
+        </a>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="d-flex flex-wrap justify-content-center
+                    align-items-center gap-2 header-actions">
+
+
+          <!-- MAIN MENU -->
+
+          <nav class="d-flex flex-wrap justify-content-center
+                      align-items-center gap-3">
+
+            <a href="index.html" class="text-decoration-none text-dark">
+              Home
+            </a>
+
+            <a href="#" class="text-decoration-none text-dark">
+              Blog
+            </a>
+
+            <a href="about.html" class="text-decoration-none text-dark">
+              About
+            </a>
+
+            <a href="#" class="text-decoration-none text-dark">
+              Contact
+            </a>
+
+          </nav>
+
+
+          <!-- SEARCH -->
+
+          <form class="d-flex align-items-center ms-lg-3" role="search">
+
+            <div class="input-group">
+
+              <input type="search"
+                class="form-control d-none d-xl-block"
+                placeholder="Search"
+                aria-label="Search">
+
+              <button type="submit"
+                class="input-group-text bg-white border"
+                aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+              </button>
+
+            </div>
+
+          </form>
+
+
+          <!-- SUBSCRIBE -->
+
+          <a href="#" class="btn btn-dark ms-lg-3">
+            Subscribe
+          </a>
+
+
+          <!-- CONTACT ICON -->
+
+          <a href="contact.html"
+            class="btn btn-dark"
+            aria-label="Contact">
+
+            <i class="fa-regular fa-envelope"></i>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <header class="journal-header">
+
+    <div class="container px-4 px-lg-5 p-5">
+
+      <div class="header-content">
+
+        <!-- Small Top Text -->
+        <div class="archive-info">
+          <span>ARCHIVE FOLIO</span>
+          <span class="dot">•</span>
+          <span>VOL. IV NO. 12</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="journal-title">
+          The Journal &amp; Archives
+        </h1>
+
+        <!-- Description -->
+        <p class="journal-description">
+          Essays, reflections, and practical guides for intentional living.
+          Curated notes on craft, stillness, and mindful work.
+        </p>
+
+        <!-- Manuscripts -->
+        <div class="manuscripts">
+          <span class="status-dot"></span>
+          <span>48 Manuscripts Indexed</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= FILTER SECTION ================= -->
+
+  <section class="filter-section">
+
+    <div class="container px-4 px-lg-5">
+
+      <div class="filter-wrapper">
+
+        <!-- Search -->
+        <div class="search-box">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input type="text"
+            placeholder="Search manuscripts, topics...">
+
+        </div>
+
+
+        <!-- Categories -->
+        <div class="categories">
+
+          <button class="category active">
+            All Stories (48)
+          </button>
+
+          <button class="category">
+            Personal Growth (14)
+          </button>
+
+          <button class="category">
+            Wellness (11)
+          </button>
+
+          <button class="category">
+            Productivity (9)
+          </button>
+
+          <button class="category">
+            Travel (8)
+          </button>
+
+          <button class="category">
+            Creative
+          </button>
+
+        </div>
+
+
+        <!-- Sort -->
+        <div class="sort-box">
+
+          <span class="sort-text">SORT:</span>
+
+          <button class="sort-button">
+            Latest First
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+     FEATURED ARTICLE SECTION
+========================================================= -->
+
+<section class="featured-article-section">
+  <div class="container px-2 px-md-4">
+
+    <div class="featured-article">
+
+      <!-- LEFT IMAGE -->
+      <div class="featured-image">
+        <img src="image/Image.png" alt="Featured Article">
+
+        <span class="archive-badge">
+          ARCHIVAL SPOTLIGHT
+        </span>
+      </div>
+
+
+      <!-- RIGHT CONTENT -->
+      <div class="featured-content">
+
+        <!-- Category + Date -->
+        <div class="article-meta">
+          <span class="category-badge">PRODUCTIVITY</span>
+
+          <span class="meta-dot">•</span>
+
+          <span class="article-date">Sep 1, 2026</span>
+        </div>
+
+
+        <!-- Title -->
+        <h2 class="featured-title">
+          Why Doing Less Can
+          Help You <br> Accomplish
+          More
+        </h2>
+
+
+        <!-- Description -->
+        <p class="featured-description">
+          Productivity is not about filling every minute with frantic
+          activity. More often, your most profound, durable work
+          begins precisely when you create space for stillness and
+        </p>
+
+
+        <!-- Bottom Area -->
+        <div class="article-bottom">
+
+          <!-- Author -->
+          <div class="author-info">
+
+            <div class="author-icon">
+              <i class="fa-regular fa-user"></i>
+            </div>
+
+            <div>
+              <h6>Daniel Brooks</h6>
+              <p>6 min read • Essay</p>
+            </div>
+
+          </div>
+
+
+          <!-- Read More -->
+          <a href="#" class="read-more">
+            <span>Read</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     COLLECTED DISPATCHES SECTION — 9 CARDS
+========================================================= -->
+
+<section class="dispatches-section">
+  <div class="container px-3 px-md-4">
+
+    <!-- Section Heading -->
+    <div class="dispatches-heading d-flex justify-content-between align-items-center">
+
+      <h2 class="dispatches-title">
+        Collected Dispatches
+      </h2>
+
+      <p class="dispatches-count">
+        Showing 1–9 of 48 Entries
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         ALL 9 CARDS
+    ====================================================== -->
+
+    <div class="row g-4">
+
+
+      <!-- =================================================
+           CARD 01
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+            <img src="image/AB6AXuDDJP0Oze-9_7xQ1anQq22UfSn2Zw5IEPoE1ThJ_lUxAJKCI3rSk2RxaPDzAeuuezFeEiTjLLa4Z_RzSkwUDqOobz8xSXnjpvgkp-2AjF-8BWBZ83fYceDZAQvdwE5eXgBmPkFF8gmZU5NBrkMLFAtmHWfx3Qlfpnnxdgl2x3_QkfgA6L-THkwTEs166ixAe75P8c2TAUf-cL7mmp8Kb.png"
+                 alt="Morning Phone Habits">
+
+            <span class="dispatch-category">
+              TECHNOLOGY
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 24, 2026 • 4 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              How to Stop Checking Your Phone
+              First Thing in the Morning
+            </h3>
+
+            <p class="dispatch-description">
+              Reclaim your early hours by building a
+              simple barrier between waking up and...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Sarah Jenkins</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 02
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+        <img src="image/Background.png" alt="">
+
+            <span class="dispatch-category">
+              PRODUCTIVITY
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 20, 2026 • 5 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              The Sunday Reset Routine That
+              Makes Monday Easier
+            </h3>
+
+            <p class="dispatch-description">
+              A peaceful 45-minute evening ritual to
+              prepare your physical home and mind for the...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Daniel Brooks</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 03
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+                <img src="image/AB6AXuDiR5elIdhdB_eHwgphTpiQPaoKvnZCYug3QoJD17E_kMOe8oUs-hUq7wJR3lFouFHDKc-sR2YoN63BDoAf2ioWZUKdodc-Oe75FDhwZYG44lJjiZqok4eKoU0SPlrXesj8filH10bqWZtzNkU8zsP2RhveOi4dLl6ZROVXL6pmvgIZ0J-bG8l9GUp6XuHGEQ78hMj80c37e0e2PHbD8.png"
+                 alt="Sunday Reset Routine">
+
+            <span class="dispatch-category">
+              TRAVEL
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 18, 2026 • 8 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              A Slow Weekend in a Small Coastal
+              Town
+            </h3>
+
+            <p class="dispatch-description">
+              Coffee shops, quiet beaches, secondhand
+              bookstores, and long unscripted walks...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Sophia Miller</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 04
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+            <img src="image/AB6AXuBcKDeD1jwl-_SFIBxIHeh4Y_i2OoygGeLeA1iaqnDyYev39_Aln_GHxe4xaFjBgDe8nZPfcWuXnsDYrY8POPERtjzikZAZAtPPk-35vZUc3q6_WgqRL-qwieYMiVaoa2aQh1P8vPavdTruwwYaTAapitv9NQ80e-sn-mA-4M2izj7cKkp3t-e6A77GUgaQcfrxv8uj0TpNS81Umff4q.png"
+                 alt="Simple Living">
+
+            <span class="dispatch-category">
+              LIFESTYLE
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 15, 2026 • 6 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              The Quiet Art of Creating a
+              Simpler Everyday Life
+            </h3>
+
+            <p class="dispatch-description">
+              Small intentional changes can transform
+              the way you experience your everyday life...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Emma Wilson</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 05
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+            <img src="image/AB6AXuCwCuzix9vyHskXH-ajGiKVG2Qy5DCynWvbD_JozvEPHZQxo2eWiG-5upu3j0N0rXJLMzxQ2rm9VZido7ikjk57PUKCtGrihgJURqcAKwAZxeU08j8cgphwWe9KyS9OWNOgPI-NO2MJE5m_Sbl4Cbt5_yKuHoAHhhncubhP1J0R9QB3yPhQfLxYaNcLXfy5ZzyXw806j5TenGUuLig1m.png"
+                 alt="Creative Work">
+
+            <span class="dispatch-category">
+              CREATIVITY
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 12, 2026 • 7 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              How to Make More Space for
+              Creative Thinking
+            </h3>
+
+            <p class="dispatch-description">
+              Creativity often appears when we slow down
+              and give our minds enough room to wander...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Olivia Carter</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 06
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+            <img src="image/AB6AXuCDXfQFcqWUzh-Mv9hIQ668MPX2Oe-IY_vDPEY50bO21DDL0XfA28EMZKJoFqhU2T8XLIhuePIubkTsPNzYNqmPccyTowelH1YAm-QSagivYTNNscWZ6m2t4juD0Ul3pBqq5vM6naCnyHsNRbh2CrCuePaqBS6rlpzfTQ_kEYwpksJWEC_ySylGJCvaWx0QCa7pTsr2pncl77d4nNTqp.png"
+                 alt="Morning Routine">
+
+            <span class="dispatch-category">
+              WELLNESS
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 10, 2026 • 5 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              A Better Morning Begins With
+              a Slower Start
+            </h3>
+
+            <p class="dispatch-description">
+              Your morning does not need to be rushed.
+              Create a peaceful beginning that lasts...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>James Anderson</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 07
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+            <img src="image/AB6AXuAyg1Yx85vIMxvHuVMWwtHduWxDvQM4On0rOzgm2BjQEA0itQGwr4XTOarcX7YmhT1_Uo4dFCBXDSKB6Se5x7Ug9UpFs4-ZkOFEgcJokdWSM9NQVTzgmgDlCaaQPGqlX9wl6FSB13kXu9xSpSm3TiOtRm3YRGjIPI7nd-9q9jqrKaNjAfCBi98Jk6uq-_i6eJapbtDu15dK7399JuYbo.png"
+                 alt="Digital Balance">
+
+            <span class="dispatch-category">
+              TECHNOLOGY
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 07, 2026 • 6 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              Finding a Healthier Balance
+              With Digital Technology
+            </h3>
+
+            <p class="dispatch-description">
+              Technology can make life easier when we
+              learn to use it with intention and balance...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Michael Brown</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 08
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+            <img src="image/AB6AXuBCpfxB2L3OnPkUjRGWgaFL17TFNToCTj8xDyzM2YsUCQskjiNOzghZK6OsBbNAZN1mFz9KFPcho6l9FjgAEuADFRpWIjai0DKElKoTlv59VkeyjH94NdPyAUdn5lENpHX5L3L1VvdeZv3tuUx3iKSZUDrQEvNxqxadUJNU10yXA-eiwgGMtWuB3_qfWzg4Nj8PEWqkNDsz-dklnAR_b.png"
+                 alt="Slow Travel">
+
+            <span class="dispatch-category">
+              TRAVEL
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 04, 2026 • 9 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              Why Slow Travel Creates
+              Better Memories
+            </h3>
+
+            <p class="dispatch-description">
+              Take less from your itinerary and leave
+              more room for unexpected moments...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Charlotte Davis</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CARD 09
+      ================================================== -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <article class="dispatch-card">
+
+          <div class="dispatch-image">
+
+            <!-- CHANGE IMAGE -->
+            <img src="image/Background (2).png"
+                 alt="Mindful Productivity">
+
+            <span class="dispatch-category">
+              PRODUCTIVITY
+            </span>
+
+          </div>
+
+
+          <div class="dispatch-content">
+
+            <p class="dispatch-meta">
+              Aug 01, 2026 • 5 min read
+            </p>
+
+            <h3 class="dispatch-card-title">
+              The Power of Doing One Thing
+              at a Time
+            </h3>
+
+            <p class="dispatch-description">
+              Focus becomes easier when you stop trying
+              to accomplish everything at once...
+            </p>
+
+
+            <div class="dispatch-bottom">
+
+              <div class="dispatch-author">
+
+                <span class="dispatch-author-icon">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+
+                <span>Daniel Brooks</span>
+
+              </div>
+
+
+              <a href="#" class="dispatch-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- =========================================================
+       NEWSLETTER
+  ========================================================== -->
+
+  <div class="container text-center mt-5 newsletter-section">
+
+    <div class="row">
+
+      <div class="col bg-body-secondary p-4 p-md-5">
+
+        <form action="#">
+
+          <h6>
+            WEEKLY JOURNAL
+          </h6>
+
+
+          <h1 class="pt-2"
+            style="font-family:'Playfair Display', serif;
+                   font-size:40px;">
+
+            A thoughtful email for your <br>
+            Sunday morning
+
+          </h1>
+
+
+          <p class="card-text text-muted mt-2"
+            style="font-family:'Inter', sans-serif;
+                   font-size:18px;">
+
+            A short collection of ideas, articles, books, and inspiration
+            delivered once a week. No noise, no spam.
+
+          </p>
+
+
+          <div class="d-flex justify-content-center
+                      gap-2 newsletter-form">
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email"
+              required
+              class="form-control"
+              style="padding:12px;
+                     border-radius:10px;
+                     background-color:white;">
+
+            <button
+              type="submit"
+              class="btn"
+              style="padding:12px 18px;
+                     border-radius:10px;
+                     background-color:black;
+                     color:white;
+                     font-family:'Inter', sans-serif;
+                     font-size:16px;">
+
+              Join The Newsletter
+
+            </button>
+
+          </div>
+
+
+          <p class="card-text text-muted mt-3"
+            style="font-family:'Inter', sans-serif;
+                   font-size:16px;">
+
+            Join 12,000+ thoughtful readers.
+
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       GALLERY
+  ========================================================== -->
+
+  <div class="container mt-5">
+
+    <div class="row">
+
+      <div class="gallery d-flex">
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyh7GV2y5D9WMZh28gI6M2k6ve06KbY13Tnuks8n1I8Cg_ETue8IrTAo&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiHSuCYr5pFHjg584mpFaJQGoM9TkHpOYXthlzWV4Oqg&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi7aT6QcAlgnhmaj3kfK4dPAKymP3mozt70sc2gzRRKFaVPKwXTZspguc&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv706wasX8_gPbdp8O0TT1LXeOdNMG0ZONBZZ6pnebRg&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyh7GV2y5D9WMZh28gI6M2k6ve06KbY13Tnuks8n1I8Cg_ETue8IrTAo&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+
+        <div class="col">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_R3quQdjcWzR2yV-Xn2RITSWg6shXAdHs2kv1k5qeEw&s=10"
+            class="img-fluid w-100"
+            style="max-width:200px;
+                   height:200px;
+                   object-fit:cover;"
+            alt="Gallery image">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<div class="container">
+
+  <footer class="site-footer py-5 mt-5"
+    style="
+      background:#f5f2ec;
+      color:#1d1d1b;
+      border:1px solid #e5e0d7;
+    ">
+
+    <div class="container-fluid px-4 px-md-5">
+
+      <!-- MAIN FOOTER -->
+
+      <div class="row gy-5">
+
+        <!-- BRAND -->
+        <div class="col-lg-5 col-md-6">
+
+          <h5 class="mt-4 mb-3"
+            style="
+              font-family:'Playfair Display',serif;
+              font-size:20px;
+              font-weight:600;
+            ">
+            THE DAILY NOTE
+          </h5>
+
+          <p class="text-muted mt-2"
+            style="
+              font-family:'Inter',sans-serif;
+              font-size:18px;
+            ">
+            Thoughtful stories about living, working, creating, and
+            growing with intention. Published weekly for contemplative
+            minds.
+          </p>
+
+          <!-- SOCIAL ICONS -->
+
+          <div class="d-flex gap-3 mt-4">
+
+            <a href="#"
+              aria-label="Facebook"
+              class="d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+              style="
+                width:38px;
+                height:38px;
+                border:1px solid #d8d2c8;
+                color:#1d1d1b;
+              ">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#"
+              aria-label="Instagram"
+              class="d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+              style="
+                width:38px;
+                height:38px;
+                border:1px solid #d8d2c8;
+                color:#1d1d1b;
+              ">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#"
+              aria-label="Twitter"
+              class="d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+              style="
+                width:38px;
+                height:38px;
+                border:1px solid #d8d2c8;
+                color:#1d1d1b;
+              ">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="#"
+              aria-label="LinkedIn"
+              class="d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+              style="
+                width:38px;
+                height:38px;
+                border:1px solid #d8d2c8;
+                color:#1d1d1b;
+              ">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <div class="col-lg-2 col-md-6">
+
+          <h6 class="mb-4"
+            style="
+              font-family:'Playfair Display',serif;
+              font-size:17px;
+              font-weight:600;
+            ">
+            Menu
+          </h6>
+
+          <ul class="list-unstyled mb-0">
+
+            <li class="mb-3">
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                Home
+              </a>
+            </li>
+
+            <li class="mb-3">
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                About
+              </a>
+            </li>
+
+            <li class="mb-3">
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                Explore
+              </a>
+            </li>
+
+            <li class="mb-3">
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                Services
+              </a>
+            </li>
+
+            <li>
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                About Us
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- TOPICS -->
+
+        <div class="col-lg-2 col-md-6">
+
+          <h6 class="mb-4"
+            style="
+              font-family:'Playfair Display',serif;
+              font-size:17px;
+              font-weight:600;
+            ">
+            Topics
+          </h6>
+
+          <ul class="list-unstyled mb-0">
+
+            <li class="mb-3">
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                Wellness
+              </a>
+            </li>
+
+            <li class="mb-3">
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                Personal Growth
+              </a>
+            </li>
+
+            <li class="mb-3">
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                Productivity
+              </a>
+            </li>
+
+            <li>
+              <a href="#"
+                class="text-decoration-none"
+                style="color:#77736c;font-size:14px;">
+                Creativity
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- DISPATCH -->
+
+        <div class="col-lg-3 col-md-6">
+
+          <h6 class="mb-4"
+            style="
+              font-family:'Playfair Display',serif;
+              font-size:17px;
+              font-weight:600;
+            ">
+            Dispatch
+          </h6>
+
+          <p class="mb-0"
+            style="
+              color:#77736c;
+              font-size:14px;
+              line-height:1.8;
+            ">
+            Thoughtful ideas, useful insights and quiet inspiration,
+            delivered straight to your inbox.
+          </p>
+
+          <!-- Newsletter -->
+
+          <form class="mt-4">
+
+            <div class="input-group">
+
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your email address"
+                required
+                style="
+                  height:48px;
+                  background:transparent;
+                  border:1px solid #d8d2c8;
+                  border-radius:0;
+                  box-shadow:none;
+                  font-size:13px;
+                  padding:0 8px;
+                ">
+
+              <button
+                type="submit"
+                class="btn"
+                style="
+                  background:#1d1d1b;
+                  color:#fff;
+                  border-radius:0;
+                  padding:0 20px;
+                  font-size:13px;
+                  font-weight:500;
+                ">
+                Subscribe
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="row align-items-center mt-5 pt-4"
+        style="border-top:1px solid #ded9d0;">
+
+        <!-- COPYRIGHT -->
+
+        <div class="col-md-6">
+
+          <p class="mb-0 text-center text-md-start"
+            style="
+              color:#88847c;
+              font-size:12px;
+            ">
+            © 2026 The Daily Note. All rights reserved.
+          </p>
+
+        </div>
+
+
+        <!-- PRIVACY / TERMS -->
+
+        <div class="col-md-6 mt-3 mt-md-0">
+
+          <div class="d-flex justify-content-center justify-content-md-end gap-4">
+
+            <a href="#"
+              class="text-decoration-none"
+              style="color:#88847c;font-size:12px;">
+              Privacy Policy
+            </a>
+
+            <a href="#"
+              class="text-decoration-none"
+              style="color:#88847c;font-size:12px;">
+              Terms & Conditions
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</div>
+```
+
+
+  <!-- =========================================================
+       BOOTSTRAP JS
+  ========================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrVWrJcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
